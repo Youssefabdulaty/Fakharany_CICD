@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# شغّل السكريبت وتحقق من الناتج
-output=$(node src/app.js)
+output=$(node src/app.js "Youssef")
 
-# النتيجة المتوقعة
-expected="Hello, World"
+expected="Hello, Youssef"
 
 echo "Running greet.js..."
 echo "Output: $output"
