@@ -1,4 +1,3 @@
-console.log("App is running");
 
 
 function greet(name){
