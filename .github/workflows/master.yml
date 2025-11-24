@@ -16,3 +16,6 @@ jobs:
         uses: actions/checkout@v6.0.0
       - name: List repository Files
         run: ls -la
+
+      - name: Cat file index.html
+        run: cat index.html
