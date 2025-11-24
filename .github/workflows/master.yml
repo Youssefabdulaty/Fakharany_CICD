@@ -1,0 +1,17 @@
+name: First Github Action
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Welocme Message 
+        run: echo "welcome to our first Github action"
+
+      - name: List repository Files
+        run: ls -la
