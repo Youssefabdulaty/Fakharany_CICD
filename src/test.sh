@@ -4,6 +4,7 @@ output=$(node src/app.js "Youssef")
 
 expected="Hello, Youssef"
 
+
 echo "Running greet.js..."
 echo "Output: $output"
 
