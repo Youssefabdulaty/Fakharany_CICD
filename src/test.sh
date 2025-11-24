@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # شغّل السكريبت وتحقق من الناتج
-output=$(node app.js)
+output=$(node src/app.js)
 
 # النتيجة المتوقعة
 expected="Hello, World"
