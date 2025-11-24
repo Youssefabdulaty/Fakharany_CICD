@@ -1,0 +1,23 @@
+name: Test push and pull request pipline action
+
+on:
+    push:
+        branches:
+            - master
+            - "release/**"
+        paths:
+            - "src/**"
+    pull_request:
+        branches:
+            - master
+            - "release/**"
+jobs:
+    test:
+        runs_on: ubuntu-latest
+
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v6.0.0
+
+            - name: test code
+              run: npm test
