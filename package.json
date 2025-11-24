@@ -4,7 +4,7 @@
   "description": "A simple nodejs app for Github actions PR tests",
   "main": "src/app.js",
   "scripts": {
-    "start": "node greet.js",
+    "start": "node src/app.js",
     "test": "bash src/test.sh"
   }
 }

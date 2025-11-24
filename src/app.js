@@ -1,5 +1,8 @@
+console.log("App is running");
+
+
 function greet(name){
-    retun `Hello, ${name}`
+    return `Hello, ${name}`
 }
 
 module.exports= greet;
