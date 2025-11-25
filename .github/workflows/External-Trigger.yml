@@ -2,7 +2,8 @@ name: External Trigger Test
 
 on: 
   repository_dispatch:
-    types: [deploy_app]
+    types: 
+      - deploy_app
 
 jobs:
     test_job:
