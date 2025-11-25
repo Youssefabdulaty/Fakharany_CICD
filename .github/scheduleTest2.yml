@@ -1,0 +1,13 @@
+name: Test Run Schedule 2 Trigger
+
+on:
+    schedule:
+        - cron: "0 23 * * *"
+
+jobs:
+    daily_task:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Print Message
+              run: echo "running Schedule Tasks 23:00"
