@@ -10,7 +10,7 @@ jobs:
     steps: 
       - run: |
           npm install
-          npm rub build
+          npm run build
         working-directory: ./temp
         shell: bash
 
