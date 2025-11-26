@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
+      - uses: actions/checkout@v6.0.0
       - run: |
           npm install
           npm run build
-        working-directory: ./temp
+        working-directory: .
         shell: bash
 
       - run: print %ENV
