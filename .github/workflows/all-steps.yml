@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6.0.0
+ #     - uses: actions/checkout@v6.0.0
       
       - name: install tree
         run: sudo apt install tree
-        
+      
       - run: ls -lh
      
       - run: |
