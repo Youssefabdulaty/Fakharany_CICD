@@ -1,0 +1,13 @@
+name: Greet user
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  action_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        uses: .github/actions/greet/Greet-CustomAction
+        with:
+          name: youssef
