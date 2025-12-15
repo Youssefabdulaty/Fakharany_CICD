@@ -8,15 +8,9 @@ on:
         type: string
         required: true
         default: 'production'
-      value:
-        description: 'A numeric value'
-        type: number
-        required: true
-        default: 50
 
 jobs:
   call-reusable:
     uses: ./.github/workflows/reusable.yml
     with:
       ENV: ${{ github.event.inputs.ENV }}
-      value: ${{ github.event.inputs.value }}

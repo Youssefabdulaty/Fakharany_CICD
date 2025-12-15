@@ -6,13 +6,10 @@ on:
       ENV:
         type: string
         default: "development"
-      value:
-        type: number
-        default: 10
 
 jobs:
   TEST_JOB:
     runs-on: ubuntu-latest
     steps:
       - name: Print environment
-        run: echo "Environment is ${{ inputs.ENV }} - Value is ${{ inputs.value }}"
+        run: echo "Environment is ${{ inputs.ENV }}"
