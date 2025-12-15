@@ -1,32 +1,25 @@
 name: ahla msa 3la yasser
 
 on: 
-  push:
-    branches:
-      - master
-
-
+  workflow_dispatch:
+    inputs:
+        ENV:
+            description: 'Environment name'
+            type: string
+            required: true
+            default: 'production'
+        value:
+            description: 'A numeric value'
+            type: number
+            required: true
+            default: 50
 
 jobs:
     yasser-job:
         runs-on: ubuntu-latest
-    
         steps:
-            - name: install python and flask
-              run: sudo apt install python3 && pip install flask 
-
-            - name: what is version
-              run : python3 --version
-            
-            - name: list files before checkout
-              run: ls -lha
-
-            - name: checkout repository
-              uses: actions/checkout@v6.0.1
-              
-            - name: list files after checkout
-              run: ls -lha
-
-            - name: test application
-              working-directory: ./src 
-              run: python3 yasser.py
+            - name: test resubale workflow
+              uses: ./.github/workflows/reusable.yml
+              with:
+                ENV: "production"
+                value: 50
