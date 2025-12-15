@@ -1,15 +1,20 @@
 name: Reusable Workflow
 
 on:
-  workflow_call:
-    inputs:
-      ENV:
-        type: string
-        default: "development"
+    workflow_dispatch:
+        inputs:
+            environment:
+              description: "choose environment:"
+              required: true
+              default: development
+              type: choice
+              options:
+                - staging
+                - production
 
 jobs:
   TEST_JOB:
     runs-on: ubuntu-latest
     steps:
       - name: Print environment
-        run: echo "Environment is ${{ inputs.ENV }}"
+        run: echo "Environment is ${{ inputs.environment }}"
