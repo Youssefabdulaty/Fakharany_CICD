@@ -1,0 +1,11 @@
+name: yasser Schedule
+on:
+  schedule:
+    - cron: '10 12 * * *'  
+
+jobs:
+  call-reusable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test yasser Schedule
+        run: echo "yasser Schedule works! ${date}"
