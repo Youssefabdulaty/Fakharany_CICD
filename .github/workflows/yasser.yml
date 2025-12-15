@@ -13,7 +13,7 @@ jobs:
     
         steps:
             - name: install python and flask
-              run: sudo apt install python3 && pip install flask -y
+              run: sudo apt install python3 && pip install flask 
 
             - name: what is version
               run : python3 --version
