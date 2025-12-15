@@ -1,5 +1,3 @@
-name: resumable workflow
-
 on:
   workflow_call:
     inputs:
