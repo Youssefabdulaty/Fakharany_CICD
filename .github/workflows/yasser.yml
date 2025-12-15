@@ -1,25 +1,22 @@
-name: ahla msa 3la yasser
+name: Caller Workflow
 
-on: 
+on:
   workflow_dispatch:
     inputs:
-        ENV:
-            description: 'Environment name'
-            type: string
-            required: true
-            default: 'production'
-        value:
-            description: 'A numeric value'
-            type: number
-            required: true
-            default: 50
+      ENV:
+        description: 'Environment name'
+        type: string
+        required: true
+        default: 'production'
+      value:
+        description: 'A numeric value'
+        type: number
+        required: true
+        default: 50
 
 jobs:
-    yasser-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: test resubale workflow
-              uses: ./.github/workflows/reusable.yml
-              with:
-                ENV: "production"
-                value: 50 
+  call-reusable:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      ENV: ${{ github.event.inputs.ENV }}
+      value: ${{ github.event.inputs.value }}
