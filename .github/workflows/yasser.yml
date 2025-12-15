@@ -27,5 +27,5 @@ jobs:
             - name: list files after checkout
               run: ls -lha
 
-            - name: test application 
+            - name: test src/application 
               run: python3 script.py
