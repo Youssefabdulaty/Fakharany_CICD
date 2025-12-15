@@ -6,20 +6,17 @@ on:
       - master
 
 
+
 jobs:
     yasser-job:
         runs-on: ubuntu-latest
     
         steps:
-            - run: value=10
-            - name: Print Welocme Message 
-              run: echo "ahla msa 3la yasser"
-            - name: checkout repository
-              uses: actions/checkout@v6.0.0
-            - name: List repository Files
-              run: ls -la
-            - name: what is user
-              run: whoami
-            - run: echo $value
+            - name: install python and flask
+              run: apt install python3 && pip install flask -y
 
+            - name: what is version
+              run : python3 --version
             
+            - name: test application 
+              run: python3 script.py
