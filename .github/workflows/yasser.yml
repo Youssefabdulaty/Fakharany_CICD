@@ -1,0 +1,25 @@
+name: ahla msa 3la yasser
+
+on: 
+  push:
+    branches:
+      - master
+
+
+jobs:
+    yasser-job:
+        runs-on: ubuntu-latest
+    
+        steps:
+            - run: value=10
+            - name: Print Welocme Message 
+              run: echo "ahla msa 3la yasser"
+            - name: checkout repository
+              uses: actions/checkout@v6.0.0
+            - name: List repository Files
+              run: ls -la
+            - name: what is user
+              run: whoami
+            - run: echo $value
+
+            
